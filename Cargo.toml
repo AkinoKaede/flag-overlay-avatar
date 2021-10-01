@@ -1,0 +1,16 @@
+[package]
+name = "flag-overlay-avatar"
+version = "0.1.0"
+authors = ["AkinoKaede <autmaple@protonmail.com>"]
+description = "Overlays a transparent flag on the avatar."
+repository = "https://github.com/AkinoKaede/flag-overlay-avatar"
+readme = "README.md"
+keywords = ["avatar", "flag"]
+license = "GPL-3.0-or-later"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "^3.0.0-beta", features = ["yaml"] }
+image = "^0"

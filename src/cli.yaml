@@ -1,0 +1,25 @@
+name: flag-overlay-avatar
+version: v0.1.0
+about: Overlays a transparent flag on the avatar.
+args:
+  - avatar:
+      short: a
+      long: avatar
+      value_name: FILE
+      about: Set the avatar file
+      required: true
+      takes_value: true
+  - flag:
+      short: f
+      long: flag
+      value_name: FILE
+      about: Set the flag file
+      required: true
+      takes_value: true
+  - output:
+      short: o
+      long: output
+      value_name: FILE
+      about: Set the output file
+      required: true
+      takes_value: true
