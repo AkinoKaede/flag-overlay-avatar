@@ -13,5 +13,8 @@ fn main() {
     let flag_image = image::open(flag).unwrap().to_rgba8();
     let output_image = overlay(avatar_image, flag_image);
 
-    output_image.save(output).unwrap();
+    match output_image.save(output) {
+        Ok(_) => println!("Saved to {}", output),
+        Err(e) => println!("Error: {}", e),
+    }
 }

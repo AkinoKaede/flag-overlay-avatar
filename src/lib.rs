@@ -40,5 +40,5 @@ pub fn overlay(avatar: RgbaImage, flag: RgbaImage) -> RgbaImage {
 
     imageops::overlay(&mut avatar, &transparent_flag_resized, 0, 0);
 
-    avatar.clone()
+    avatar
 }
