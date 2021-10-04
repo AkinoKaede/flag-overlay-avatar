@@ -10,8 +10,9 @@ fn flag_transparent(image: RgbaImage) -> RgbaImage {
     let mut sub_image = imageops::crop(&mut image, 0, 0, length, length).to_image();
     let mut transparent_image = ImageBuffer::new(length, length);
     for (x, y, pixel) in sub_image.enumerate_pixels_mut() {
-        let transparency =
-            pixel[3] - (255 as f64 * ((x * x + y * y) as f64).sqrt() / (length as f64)) as u8;
+        let transparency = pixel[3]
+            - (255 as f64 * ((x * x + y * y) as f64).sqrt() / ((2 as f64).sqrt() * length as f64))
+                as u8;
         transparent_image.put_pixel(
             x,
             y,
